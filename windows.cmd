@@ -9,7 +9,6 @@ echo "Downloading file"
 powershell (new-object System.Net.WebClient).DownloadFile('https://central.github.com/deployments/desktop/desktop/latest/win32','%Downloads%\GitHubDesktopSetup.exe')
 echo "Opening GitHub Desktop Installer"
 %Downloads%\GitHubDesktopSetup.exe
-erase %Downloads%\GitHubDesktopSetup.exe
 exit /b 0
 
 :abort32bit
