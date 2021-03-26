@@ -3,7 +3,7 @@ CompatibilityRelDoc() {
     echo "Please see the following documentation for more info:
     https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/supported-operating-systems#about-supported-operating-systems"
 }
-if [ "$(uname -s)" = Linux ]
+if [ "$(uname -s)" != Darwin ]
 then
     echo "GitHub Desktop cannot run on Linux."
     CompatibilityRelDoc
