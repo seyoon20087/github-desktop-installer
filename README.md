@@ -10,6 +10,7 @@ curl -fsSL https://raw.githubusercontent.com/seyoon20087/github-desktop-installe
 And when prompted, enter your password.
 
 <h2>Instructions for Windows</h2>
+
 1. Open Command Prompt with administrator privileges.
 
 2. Execute these commands in the command prompt:
