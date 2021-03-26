@@ -13,9 +13,6 @@ exit /b 0
 
 :abort32bit
 echo "You must have a 64-bit operating system to run GitHub Desktop."
-compatibilityRelDoc
-exit /b 1
-
-:compatibilityRelDoc
 echo "Please see the following documentation for more info:"
 echo "https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/supported-operating-systems#about-supported-operating-systems"
+exit /b 1
