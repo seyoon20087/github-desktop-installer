@@ -6,8 +6,8 @@ if %OS%==32BIT goto abort32bit
 echo "Downloading file"
 powershell (new-object System.Net.WebClient).DownloadFile('https://central.github.com/deployments/desktop/desktop/latest/win32','%Downloads%\GitHubDesktopSetup.exe')
 echo "Opening GitHub Desktop Installer"
-C:\tmp\GitHubDesktopSetup.exe
-erase C:\tmp\GitHubDesktopSetup.exe
+%Downloads%\GitHubDesktopSetup.exe
+erase %Downloads%\GitHubDesktopSetup.exe
 exit /b 0
 
 :abort32bit
