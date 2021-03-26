@@ -28,9 +28,9 @@ Check_Volume_Support()
 {
 	if ! [[ $volume_version_short == "10.1"[0-5] || $volume_version_short == "11" ]]
 	then
-			echo "GitHub Desktop requires OS X Yosemite and later."
-			CompatibilityRelDoc
-			exit 1
+		echo "GitHub Desktop requires OS X Yosemite and later."
+		CompatibilityRelDoc
+		exit 1
 	fi
 }
 
