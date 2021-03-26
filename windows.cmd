@@ -12,7 +12,7 @@ erase C:\tmp\GitHubDesktopSetup.exe
 exit /b 0
 
 :abort32bit
-echo "You must use a 64-bit operating system to run GitHub Desktop."
+echo "You must have a 64-bit operating system to run GitHub Desktop."
 compatibilityRelDoc
 exit /b 1
 
