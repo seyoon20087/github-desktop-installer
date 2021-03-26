@@ -16,6 +16,6 @@ And when prompted, enter your password.
 2. Execute these commands in the command prompt:
 
 ```cmd
-powershell (new-object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/seyoon20087/github-desktop-installer/main/windows.cmd','%Downloads%\GitHubDesktopInstaller.cmd')
+powershell -command "& { iwr https://raw.githubusercontent.com/seyoon20087/github-desktop-installer/main/windows.cmd -OutFile %Downloads%\GitHubDesktopInstaller.cmd }"
 cmd /c "%Downloads%\GitHubDesktopInstaller.cmd"
 ```
