@@ -3,12 +3,6 @@ CompatibilityRelDoc() {
     echo "Please see the following documentation for more info:
     https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/supported-operating-systems#about-supported-operating-systems"
 }
-if [ "$(uname -s)" != Darwin ]
-then
-    echo "GitHub Desktop cannot run on Linux."
-    CompatibilityRelDoc
-    exit 1
-fi
 Check_Volume_Version()
 {
 		volume_version="$(defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion)"
@@ -34,9 +28,17 @@ Check_Volume_Support()
 	fi
 }
 
-Check_Volume_Version
-Check_Volume_Support
+if [ "$(uname -s)" = Darwin ]
+then
+	Check_Volume_Version
+	Check_Volume_Support
+fi
 [ $UID = 0 ] || exec sudo "$0" "$@"
+if [ "$(uname -s)" != Darwin ]
+then
+	echo "Please run linux.sh instead of this script."
+	exit 1
+fi
 echo "Downloading GitHub Desktop"
 curl -OL "https://central.github.com/deployments/desktop/desktop/latest/darwin" &> /dev/null && mv darwin GitHubDesktop.zip
 unzip GitHubDesktop.zip &> /dev/null
