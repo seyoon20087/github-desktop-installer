@@ -15,8 +15,8 @@ then
 	fi
 elif [ "$(uname -s)" = Darwin ]
 then
-    echo "Please run mac.sh instead of this script."
-    exit 1
+    curl -fsSL https://raw.githubusercontent.com/seyoon20087/github-desktop-installer/main/mac.sh | bash
+    exit 0
 fi
 
 exit 0
