@@ -36,8 +36,8 @@ fi
 [ $UID = 0 ] || exec sudo "$0" "$@"
 if [ "$(uname -s)" != Darwin ]
 then
-	echo "Please run linux.sh instead of this script."
-	exit 1
+	curl -fsSL https://raw.githubusercontent.com/seyoon20087/github-desktop-installer/main/linux.sh | bash
+	exit 0
 fi
 echo "Downloading GitHub Desktop"
 curl -OL "https://central.github.com/deployments/desktop/desktop/latest/darwin" &> /dev/null && mv darwin GitHubDesktop.zip
