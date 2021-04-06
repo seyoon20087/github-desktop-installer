@@ -40,14 +40,13 @@ then
 	exit 0
 fi
 echo "Downloading GitHub Desktop"
-curl -OL "https://central.github.com/deployments/desktop/desktop/latest/darwin" &> /dev/null && mv darwin GitHubDesktop.zip
-unzip GitHubDesktop.zip &> /dev/null
+curl --request GET "https://central.github.com/deployments/desktop/desktop/latest/darwin" -o ~/Downloads/GitHubDesktop.zip -LO &> /dev/null && unzip ~/Downloads/GitHubDesktop.zip &> /dev/null
 if [ -d "/Applications/GitHub Desktop.app" ]
 then
     rm -rf "/Applications/GitHub Desktop.app"
 fi
 mv "GitHub Desktop.app" "/Applications"
 echo "Opening GitHub Desktop"
-rm -rf GitHubDesktop.zip
+rm -rf ~/Downloads/GitHubDesktop.zip
 open "/Applications/GitHub Desktop.app"
 exit 0
