@@ -11,7 +11,7 @@ And when prompted, enter your password.
 
 <h2>Instructions for Windows</h2>
 
-1. Open Command Prompt with administrator privileges.
+1. Open Command Prompt. **DO NOT run with administrator privileges.**
 
 2. Execute these commands in the command prompt:
 
