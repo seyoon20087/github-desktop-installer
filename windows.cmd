@@ -6,7 +6,7 @@ if %OS%==64BIT goto startinstall
 
 :startinstall
 echo "Downloading file"
-curl --request GET "https://central.github.com/deployments/desktop/desktop/latest/win32" -LO
+curl --request GET "https://central.github.com/deployments/desktop/desktop/latest/win32" --ouput %Downloads%\GitHubDesktopSetup.exe -LO
 echo "Opening GitHub Desktop Installer"
 %Downloads%\GitHubDesktopSetup.exe
 exit /b 0
