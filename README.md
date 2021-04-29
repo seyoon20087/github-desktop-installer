@@ -7,6 +7,13 @@ Execute this command in Terminal:
 curl -fsSL https://raw.githubusercontent.com/seyoon20087/github-desktop-installer/main/mac.sh | bash
 ```
 
+<h2>Instructions for Linux</h2>
+Execute this command in Terminal:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/seyoon20087/github-desktop-installer/main/linux.sh | bash
+```
+
 And when prompted, enter your password.
 
 <h2>Instructions for Windows</h2>
