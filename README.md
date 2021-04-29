@@ -16,6 +16,7 @@ And when prompted, enter your password.
 2. Execute these commands in the command prompt:
 
 ```cmd
-powershell -command "& { iwr https://raw.githubusercontent.com/seyoon20087/github-desktop-installer/main/windows.cmd -OutFile %Downloads%\GitHubDesktopInstaller.cmd }"
-cmd /c "%Downloads%\GitHubDesktopInstaller.cmd"
+cd Downloads
+powershell -command "& { iwr https://raw.githubusercontent.com/seyoon20087/github-desktop-installer/main/windows.cmd -OutFile GitHubDesktopInstaller.cmd }"
+cmd /c "GitHubDesktopInstaller.cmd"
 ```
