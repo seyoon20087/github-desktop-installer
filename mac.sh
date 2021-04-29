@@ -48,5 +48,6 @@ fi
 mv "GitHub Desktop.app" "/Applications"
 echo "Opening GitHub Desktop"
 rm -rf ~/Downloads/GitHubDesktop.zip
+sleep 1
 open "/Applications/GitHub Desktop.app"
 exit 0
