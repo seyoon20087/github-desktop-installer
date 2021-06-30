@@ -44,6 +44,7 @@ if [ "$(uname -m)" = "x86_64" ]
 then
 	curl --request GET "https://central.github.com/deployments/desktop/desktop/latest/darwin" -o ~/Downloads/GitHubDesktop.zip -LO &> /dev/null && unzip ~/Downloads/GitHubDesktop.zip &> /dev/null
 elif [ "$(uname -m)" = "arm64" ]
+then
 	curl --request GET "https://central.github.com/deployments/desktop/desktop/latest/darwin-arm64" -o ~/Downloads/GitHubDesktop.zip -LO &> /dev/null && unzip ~/Downloads/GitHubDesktop.zip &> /dev/null
 fi
 
