@@ -40,7 +40,13 @@ then
 	exit 0
 fi
 echo "Downloading GitHub Desktop"
-curl --request GET "https://central.github.com/deployments/desktop/desktop/latest/darwin" -o ~/Downloads/GitHubDesktop.zip -LO &> /dev/null && unzip ~/Downloads/GitHubDesktop.zip &> /dev/null
+if [ "$(uname -m)" = "x86_64" ]
+then
+	curl --request GET "https://central.github.com/deployments/desktop/desktop/latest/darwin" -o ~/Downloads/GitHubDesktop.zip -LO &> /dev/null && unzip ~/Downloads/GitHubDesktop.zip &> /dev/null
+elif [ "$(uname -m)" = "arm64" ]
+	curl --request GET "https://central.github.com/deployments/desktop/desktop/latest/darwin-arm64" -o ~/Downloads/GitHubDesktop.zip -LO &> /dev/null && unzip ~/Downloads/GitHubDesktop.zip &> /dev/null
+fi
+
 if [ -d "/Applications/GitHub Desktop.app" ]
 then
     rm -rf "/Applications/GitHub Desktop.app"
